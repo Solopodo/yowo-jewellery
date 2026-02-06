@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { site } from "@/data/site";
+import { site } from "../data/site";
 
 export default function Header() {
   return (
