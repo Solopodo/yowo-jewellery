@@ -1,8 +1,8 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import { site } from "@/data/site";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import { site } from "../data/site";
 
 export const metadata: Metadata = {
   title: site.brand,
