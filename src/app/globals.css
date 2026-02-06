@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: 250 250 249;      /* warm off-white */
+  --fg: 13 13 13;         /* near-black */
+  --muted: 115 115 115;   /* gray */
+  --line: 228 228 231;    /* light border */
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background: rgb(var(--bg));
+  color: rgb(var(--fg));
+}
+
+.luxe-container {
+  @apply mx-auto max-w-6xl px-5;
+}
+
+.luxe-h1 {
+  @apply text-4xl md:text-6xl font-semibold tracking-tight;
+}
+
+.luxe-kicker {
+  @apply text-xs uppercase tracking-[0.35em] text-neutral-600;
+}
+
+.luxe-card {
+  @apply rounded-2xl border border-neutral-200 bg-white/70 backdrop-blur;
+}
