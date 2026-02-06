@@ -1,6 +1,6 @@
-import ProductCard from "@/components/ProductCard";
-import { products } from "@/data/products";
-import { site } from "@/data/site";
+import ProductCard from "../../components/ProductCard";
+import { products } from "../../data/products";
+import { site } from "../../data/site";
 
 export default function CatalogPage() {
   return (
