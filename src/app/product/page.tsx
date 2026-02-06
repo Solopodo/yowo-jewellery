@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { getProductBySlug } from "@/data/products";
-import { site } from "@/data/site";
+import { getProductBySlug } from "../../../data/products";
+import { site } from "../../../data/site";
 
 export default function ProductPage({ params }: { params: { slug: string } }) {
   const product = getProductBySlug(params.slug);
