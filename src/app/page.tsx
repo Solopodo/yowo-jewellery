@@ -1,9 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import ProductCard from "@/components/ProductCard";
-import { site } from "@/data/site";
-import { getFeaturedProducts } from "@/data/products";
-
+import ProductCard from "../components/ProductCard";
+import { site } from "../data/site";
+import { getFeaturedProducts } from "../data/products";
 export default function HomePage() {
   const featured = getFeaturedProducts();
 
