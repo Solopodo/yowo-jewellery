@@ -8,8 +8,9 @@
 
 :root {
   --bg: 250 250 249;      /* warm off-white / ivory */
-  --fg: 43 43 43;         /* soft charcoal (not pure black) */
-  --muted: 115 115 115;   /* neutral gray */
+  --fg-strong: 32 32 32;  /* deep charcoal (headlines) */
+  --fg: 60 60 60;         /* body text */
+  --fg-muted: 120 120 120; /* secondary / meta */
   --line: 228 228 231;    /* light border */
 }
 
@@ -26,10 +27,11 @@ body {
   background: rgb(var(--bg));
   color: rgb(var(--fg));
   font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+  line-height: 1.65;
 }
 
 /* =========================
-   Typography foundation
+   Typography hierarchy
    ========================= */
 
 h1,
@@ -37,6 +39,11 @@ h2,
 h3,
 .luxe-h1 {
   font-family: var(--font-playfair), serif;
+  color: rgb(var(--fg-strong));
+}
+
+p {
+  color: rgb(var(--fg));
 }
 
 /* =========================
@@ -52,7 +59,8 @@ h3,
 }
 
 .luxe-kicker {
-  @apply text-xs uppercase tracking-[0.35em] text-neutral-600;
+  @apply text-xs uppercase tracking-[0.35em];
+  color: rgb(var(--fg-muted));
 }
 
 .luxe-card {
