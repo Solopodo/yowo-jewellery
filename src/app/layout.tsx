@@ -1,29 +1,32 @@
 import "./globals.css";
-import type { Metadata } from "next";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-import { site } from "../data/site";
+import { Playfair_Display, Inter } from "next/font/google";
 
-export const metadata: Metadata = {
-  title: site.brand,
-  description: site.description,
-  metadataBase: new URL(`https://${site.domain}`),
-  openGraph: {
-    title: site.brand,
-    description: site.description,
-    url: `https://${site.domain}`,
-    siteName: site.brand,
-    type: "website"
-  }
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  variable: "--font-playfair",
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  variable: "--font-inter",
+});
+
+export const metadata = {
+  title: "YOWO Jewellery",
+  description: "Fashion jewellery designed for everyday elegance.",
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en">
-      <body>
-        <Header />
-        <main>{children}</main>
-        <Footer />
+      <body className={`${inter.variable} ${playfair.variable}`}>
+        {children}
       </body>
     </html>
   );

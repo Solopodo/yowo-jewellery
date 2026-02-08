@@ -2,21 +2,46 @@
 @tailwind components;
 @tailwind utilities;
 
+/* =========================
+   Design tokens
+   ========================= */
+
 :root {
-  --bg: 250 250 249;      /* warm off-white */
-  --fg: 13 13 13;         /* near-black */
-  --muted: 115 115 115;   /* gray */
+  --bg: 250 250 249;      /* warm off-white / ivory */
+  --fg: 43 43 43;         /* soft charcoal (not pure black) */
+  --muted: 115 115 115;   /* neutral gray */
   --line: 228 228 231;    /* light border */
 }
 
-html, body {
+/* =========================
+   Base layout
+   ========================= */
+
+html,
+body {
   height: 100%;
 }
 
 body {
   background: rgb(var(--bg));
   color: rgb(var(--fg));
+  font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
 }
+
+/* =========================
+   Typography foundation
+   ========================= */
+
+h1,
+h2,
+h3,
+.luxe-h1 {
+  font-family: var(--font-playfair), serif;
+}
+
+/* =========================
+   Luxury utility classes
+   ========================= */
 
 .luxe-container {
   @apply mx-auto max-w-6xl px-5;
