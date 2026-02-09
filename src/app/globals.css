@@ -12,7 +12,6 @@
   --fg: 60 60 60;            /* body text */
   --fg-muted: 120 120 120;   /* meta text */
   --line: 228 228 231;       /* borders */
-
   --gold: 212 175 55;        /* soft champagne gold */
 }
 
@@ -49,6 +48,20 @@ p {
 }
 
 /* =========================
+   Layout rhythm (Step 5)
+   ========================= */
+
+.luxe-section {
+  margin-top: 6rem;
+}
+
+@media (min-width: 768px) {
+  .luxe-section {
+    margin-top: 8rem;
+  }
+}
+
+/* =========================
    Luxury utility classes
    ========================= */
 
@@ -70,7 +83,7 @@ p {
 }
 
 /* =========================
-   Luxury buttons (Step 4)
+   Luxury buttons
    ========================= */
 
 .luxe-btn-primary {
