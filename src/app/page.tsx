@@ -19,16 +19,13 @@ export default function HomePage() {
               Jewellery that moves with you
             </h1>
 
-            <p className="mt-5 text-neutral-700 leading-relaxed max-w-md">
+            <p className="mt-5 leading-relaxed max-w-md">
               Designed for everyday elegance — effortless, personal pieces
               made to elevate how you feel, every day.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-4">
-              <Link
-                href="/catalog"
-                className="rounded-full bg-neutral-950 px-6 py-3 text-sm text-white hover:bg-neutral-800 transition"
-              >
+              <Link href="/catalog" className="luxe-btn-primary">
                 View Collection
               </Link>
 
@@ -36,7 +33,7 @@ export default function HomePage() {
                 href={site.instagramUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="rounded-full border border-neutral-300 px-6 py-3 text-sm text-neutral-900 hover:border-neutral-400 transition"
+                className="luxe-btn-secondary"
               >
                 DM on Instagram
               </a>
@@ -69,7 +66,7 @@ export default function HomePage() {
           </div>
 
           <Link
-            className="text-sm text-neutral-700 hover:text-neutral-950 transition"
+            className="text-sm hover:underline"
             href="/catalog"
           >
             Explore all →
@@ -92,7 +89,7 @@ export default function HomePage() {
             Bold details. Clean finish.
           </h3>
 
-          <p className="mt-4 text-neutral-700 leading-relaxed max-w-3xl">
+          <p className="mt-4 leading-relaxed max-w-3xl">
             Designed for weddings, evenings out, and everyday glow-ups —
             premium-look fashion jewellery that complements your style,
             without ever feeling overdone.
@@ -103,7 +100,7 @@ export default function HomePage() {
               href={site.instagramUrl}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center rounded-full bg-neutral-950 px-6 py-3 text-sm text-white hover:bg-neutral-800 transition"
+              className="luxe-btn-primary"
             >
               DM to order on Instagram
             </a>
