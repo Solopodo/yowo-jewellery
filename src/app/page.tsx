@@ -55,25 +55,31 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* FEATURED PRODUCTS */}
+      {/* COLLECTION STORYTELLING / FEATURED EDIT */}
       <section className="luxe-container luxe-section">
-        <div className="flex items-end justify-between gap-6">
-          <div>
-            <p className="luxe-kicker">Curated</p>
-            <h2 className="mt-3 text-2xl md:text-3xl font-semibold">
-              Featured pieces
-            </h2>
-          </div>
+        <div className="max-w-2xl">
+          <p className="luxe-kicker">Curated edit</p>
 
-          <Link className="text-sm hover:underline" href="/catalog">
-            Explore all →
-          </Link>
+          <h2 className="mt-4 text-2xl md:text-3xl font-semibold">
+            Everyday to occasion — thoughtfully chosen
+          </h2>
+
+          <p className="mt-4 leading-relaxed">
+            Versatile pieces designed to move seamlessly from daily wear
+            to celebrations, balancing subtle detail with quiet presence.
+          </p>
         </div>
 
-        <div className="mt-10 grid gap-8 sm:grid-cols-2 md:grid-cols-3">
+        <div className="mt-12 grid gap-8 sm:grid-cols-2 md:grid-cols-3">
           {featured.map((p) => (
             <ProductCard key={p.slug} product={p} />
           ))}
+        </div>
+
+        <div className="mt-10">
+          <Link className="text-sm hover:underline" href="/catalog">
+            Explore the full collection →
+          </Link>
         </div>
       </section>
 
