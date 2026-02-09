@@ -55,7 +55,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* COLLECTION STORYTELLING / FEATURED EDIT */}
+      {/* COLLECTION STORYTELLING */}
       <section className="luxe-container luxe-section">
         <div className="max-w-2xl">
           <p className="luxe-kicker">Curated edit</p>
@@ -80,6 +80,29 @@ export default function HomePage() {
           <Link className="text-sm hover:underline" href="/catalog">
             Explore the full collection →
           </Link>
+        </div>
+      </section>
+
+      {/* BRAND STORY */}
+      <section className="luxe-container luxe-section">
+        <div className="max-w-3xl">
+          <p className="luxe-kicker">Our story</p>
+
+          <h2 className="mt-4 text-2xl md:text-3xl font-semibold">
+            Designed to feel like you
+          </h2>
+
+          <p className="mt-5 leading-relaxed">
+            YOWO creates fashion jewellery that blends seamlessly into
+            everyday life — refined enough for occasions, subtle enough
+            to wear on repeat.
+          </p>
+
+          <p className="mt-4 leading-relaxed">
+            Each piece is designed with balance in mind: presence without
+            excess, detail without distraction. Jewellery that complements
+            your style, not competes with it.
+          </p>
         </div>
       </section>
 
