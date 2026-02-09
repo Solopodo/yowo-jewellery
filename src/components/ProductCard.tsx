@@ -1,29 +1,34 @@
-import Link from "next/link";
 import Image from "next/image";
-import type { Product } from "../data/products";
-
+import Link from "next/link";
+import { Product } from "../data/products";
 
 export default function ProductCard({ product }: { product: Product }) {
   return (
-    <Link href={`/product/${product.slug}`} className="group">
-      <div className="luxe-card overflow-hidden">
-        <div className="relative aspect-[4/5] w-full">
+    <Link
+      href={`/products/${product.slug}`}
+      className="group block"
+    >
+      <div className="luxe-card overflow-hidden transition-transform duration-300 ease-out">
+        <div className="relative aspect-square w-full overflow-hidden">
           <Image
-            src={product.images[0]}
-            alt={product.name}
+            src={product.image}
+            alt={product.title}
             fill
-            className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"
-            sizes="(max-width: 768px) 50vw, 33vw"
-            priority={product.featured}
+            className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+            sizes="(max-width: 768px) 100vw, 33vw"
           />
         </div>
 
         <div className="p-4">
-          <p className="text-xs uppercase tracking-[0.28em] text-neutral-500">{product.category}</p>
-          <div className="mt-2 flex items-start justify-between gap-3">
-            <h3 className="text-sm font-medium text-neutral-900">{product.name}</h3>
-            {product.price ? <span className="text-sm text-neutral-700">{product.price}</span> : null}
-          </div>
+          <h3 className="text-sm font-medium leading-snug">
+            {product.title}
+          </h3>
+
+          {product.price && (
+            <p className="mt-1 text-sm text-neutral-600">
+              {product.price}
+            </p>
+          )}
         </div>
       </div>
     </Link>
